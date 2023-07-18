@@ -1,7 +1,7 @@
 import requests
 
 parameters = {
-    "amount": 4,
+    "amount": 10,
     "type": "boolean",
 }
 
