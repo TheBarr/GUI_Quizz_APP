@@ -52,10 +52,10 @@ class QuizInterface:
         self.feedback(is_right)
 
     def feedback(self, is_right):
-        if self.id_after:
-            self.window.after_cancel(self.id_after)
-        self.id_after = self.window.after(1000, self.get_next_question)
         if is_right:
             self.canvas.config(bg="green")
         else:
             self.canvas.config(bg="red")
+        if self.id_after:
+            self.window.after_cancel(self.id_after)
+        self.id_after = self.window.after(1000, self.get_next_question)
