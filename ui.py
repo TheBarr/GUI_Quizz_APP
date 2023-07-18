@@ -47,6 +47,7 @@ class QuizInterface:
             self.canvas.itemconfig(self.question_text, text=q_text)
             self.score_label.config(text=f"Score: {self.quiz.score} / {self.quiz.question_number}")
         else:
+            self.score_label.config(text=f"Score: {self.quiz.score} / {self.quiz.question_number}")
             self.canvas.itemconfig(self.question_text, text="You've reacher the end of the quiz!")
             self.true_button.config(state="disabled")
             self.false_button.config(state="disabled")
